@@ -13,6 +13,18 @@
 
             font-family: Arial, sans-serif; 
 
+            background-color: #f0f0f0; 
+
+            display: flex; 
+
+            justify-content: center; 
+
+            align-items: center; 
+
+            height: 100vh; 
+
+            margin: 0; 
+
         } 
 
         nav { 
@@ -39,38 +51,240 @@
 
         .container { 
 
-            max-width: 600px; 
+            background-color: rgb(248, 247, 247); 
 
-            margin: 0 auto; 
+            padding: 20px; 
+
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 
             text-align: center; 
 
         } 
 
+        form { 
+
+            display: flex; 
+
+            flex-direction: column; 
+
+        } 
+
+        input { 
+
+            margin-bottom: 10px; 
+
+            padding: 10px; 
+
+            font-size: 16px; 
+
+        } 
+
+        button { 
+
+            padding: 10px 20px; 
+
+            font-size: 16px; 
+
+        } 
+
     </style> 
+
+    <script> 
+
+        function validateForm() { 
+
+            var username = document.forms["loginForm"]["username"].value; 
+
+            var password = document.forms["loginForm"]["password"].value; 
+
+            if (username == "" || password == "") { 
+
+                alert("All fields must be filled out"); 
+
+                return false; 
+
+            } 
+
+            alert("Login successful!"); 
+
+        } 
+
+    </script> 
 
 </head> 
 
 <body> 
 
-    <nav> 
-
-        <a href="index.html">Home</a> 
-
-        <a href="registration.html">Registration</a> 
-
-        <a href="login.html">Login</a> 
-
-    </nav> 
-
     <div class="container"> 
 
-        <h1>Welcome to the Login Page</h1> 
+        <nav> 
+            <a href="registration.html">Registration</a> 
+
+            <a href="login.html">Login</a> 
+
+        </nav> 
+
+        <h1>Login Page</h1> 
+
+        <form name="loginForm" onsubmit="return validateForm()"> 
+
+            <input type="text" name="username" placeholder="Username" /> 
+
+            <input type="password" name="password" placeholder="Password" /> 
+
+            <button type="submit">Login</button> 
+
+        </form> 
 
     </div> 
 
 </body> 
 
 </html> 
-
  
+
+
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+    <title>Login</title> 
+
+    <style> 
+
+        body { 
+
+            font-family: Arial, sans-serif; 
+
+            background-color: #f0f0f0; 
+
+            display: flex; 
+
+            justify-content: center; 
+
+            align-items: center; 
+
+            height: 100vh; 
+
+            margin: 0; 
+
+        } 
+
+        nav { 
+
+            margin-bottom: 20px; 
+
+        } 
+
+        nav a { 
+
+            margin-right: 10px; 
+
+            text-decoration: none; 
+
+            color: blue; 
+
+        } 
+
+        nav a:hover { 
+
+            text-decoration: underline; 
+
+        } 
+
+        .container { 
+
+            background-color: rgb(248, 247, 247); 
+
+            padding: 20px; 
+
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+
+            text-align: center; 
+
+        } 
+
+        form { 
+
+            display: flex; 
+
+            flex-direction: column; 
+
+        } 
+
+        input { 
+
+            margin-bottom: 10px; 
+
+            padding: 10px; 
+
+            font-size: 16px; 
+
+        } 
+
+        button { 
+
+            padding: 10px 20px; 
+
+            font-size: 16px; 
+
+        } 
+
+    </style> 
+
+    <script> 
+
+        function validateForm() { 
+
+            var username = document.forms["loginForm"]["username"].value; 
+
+            var password = document.forms["loginForm"]["password"].value; 
+
+            if (username == "" || password == "") { 
+
+                alert("All fields must be filled out"); 
+
+                return false; 
+
+            } 
+
+            alert("Login successful!"); 
+
+        } 
+
+    </script> 
+
+</head> 
+
+<body> 
+
+    <div class="container"> 
+
+        <nav> 
+            <a href="registration.html">Registration</a> 
+
+            <a href="login.html">Login</a> 
+
+        </nav> 
+
+        <h1>Login Page</h1> 
+
+        <form name="loginForm" onsubmit="return validateForm()"> 
+
+            <input type="text" name="username" placeholder="Username" /> 
+
+            <input type="password" name="password" placeholder="Password" /> 
+
+            <button type="submit">Login</button> 
+
+        </form> 
+
+    </div> 
+
+</body> 
+
+</html> 
+ 
+
