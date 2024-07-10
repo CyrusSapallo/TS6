@@ -13,6 +13,18 @@
 
             font-family: Arial, sans-serif; 
 
+            background-color: hsl(64, 35%, 45%); 
+
+            display: flex; 
+
+            justify-content: center; 
+
+            align-items: center; 
+
+            height: 100vh; 
+
+            margin: 0; 
+
         } 
 
         nav { 
@@ -39,11 +51,31 @@
 
         .container { 
 
-            max-width: 600px; 
+            background-color: white; 
 
-            margin: 0 auto; 
+            padding: 20px; 
+
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 
             text-align: center; 
+
+        } 
+
+        form { 
+
+            display: flex; 
+
+            flex-direction: column; 
+
+        } 
+
+        input { 
+
+            margin-bottom: 10px; 
+
+            padding: 10px; 
+
+            font-size: 16px; 
 
         } 
 
@@ -57,34 +89,60 @@
 
     </style> 
 
+    <script> 
+
+        function validateForm() { 
+
+            var username = document.forms["registrationForm"]["username"].value; 
+
+            var password = document.forms["registrationForm"]["password"].value; 
+
+            var address = document.forms["registrationForm"]["address"].value; 
+
+            if (username == "" || password == "" || address == "") { 
+
+                alert("All fields must be filled out"); 
+
+                return false; 
+
+            } 
+
+            window.location.href = 'login.html'; 
+
+        } 
+
+    </script> 
+
 </head> 
 
 <body> 
 
-    <nav> 
-
-        <a href="index.html">Home</a> 
-
-        <a href="registration.html">Registration</a> 
-
-        <a href="login.html">Login</a> 
-
-    </nav> 
-
     <div class="container"> 
+
+        <nav> 
+
+            <a href="registration.html">Registration</a> 
+
+            <a href="login.html">Login</a> 
+
+        </nav> 
 
         <h1>Registration Page</h1> 
 
-        <p>If you click the following button, you will be redirected to the login page.</p> 
+        <form name="registrationForm" onsubmit="return validateForm()"> 
 
-        <button onclick="window.location.href='login.html'">Submit Me</button> 
+            <input type="text" name="username" placeholder="Username" /> 
+
+            <input type="password" name="password" placeholder="Password" /> 
+
+            <input type="text" name="address" placeholder="Address" /> 
+
+            <button type="submit">Submit Me</button> 
+
+        </form> 
 
     </div> 
 
 </body> 
 
 </html> 
-
- 
-
- 
